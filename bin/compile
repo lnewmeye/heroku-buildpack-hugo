@@ -29,7 +29,7 @@ RELEASE_NAME=hugo_${HUGO_VERSION}_Linux-64bit
 FILE_NAME=${RELEASE_NAME}.tar.gz
 HUGO_PACKAGE=https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${FILE_NAME}
 
-# Store the hugo package in the cache_dir ( persistent across builds )
+# Store the hugo package in the cache_dir ( persistent across builds )j
 mkdir -p $CACHE_DIR
 if ! [ -e $CACHE_DIR/$FILE_NAME ]; then
   echo "\n-----> Fetching Hugo ${HUGO_VERSION} binaries at ${HUGO_PACKAGE}"
@@ -48,6 +48,7 @@ if [ -e $BUILD_DIR/.hugotheme ]; then
   THEME_URL="`cat $BUILD_DIR/.hugotheme`"
   rm -rf $BUILD_DIR/themes && mkdir $BUILD_DIR/themes && cd $BUILD_DIR/themes
   git clone $THEME_URL
+  mv gohugo-theme-ananke ananke #HACK: Find a better way using submodule in git
 fi
 
 # Build the site

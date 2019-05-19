@@ -17,7 +17,7 @@ $ heroku create --buildpack https://github.com/roperzh/heroku-buildpack-hugo.git
 or configure your existent application:
 
 ```bash
-$ heroku buildpacks:set BUILDPACK_URL="https://github.com/roperzh/heroku-buildpack-hugo.git"
+$ heroku buildpacks:set "https://github.com/roperzh/heroku-buildpack-hugo.git" -a <website-name>
 ```
 
 Optionally, define a `HUGO_VERSION` Config Var to specify the Hugo version you wish to use:

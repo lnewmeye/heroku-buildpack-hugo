@@ -23,7 +23,7 @@ $ heroku buildpacks:set "https://github.com/roperzh/heroku-buildpack-hugo.git" -
 Optionally, define a `HUGO_VERSION` Config Var to specify the Hugo version you wish to use:
 
 ```bash
-$ heroku config:set HUGO_VERSION=0.25
+$ heroku config:set HUGO_VERSION=0.40.1
 ```
 
 Then simply git push to heroku and open your application!
